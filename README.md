@@ -135,6 +135,3 @@ This application is automated for continuous deployment on **GitHub Pages**:
 
 ---
 
-<div align="center">
-  <sub>Engineered with precision for modern browsers. Clean code, zero bundler dependencies, pure web performance.</sub>
-</div>
