@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Home from './components/Home.js';
 import QuizLobby from './components/QuizLobby.js';
 import Quiz from './components/Quiz.js';
-
 import Sudoku from './components/Sudoku.js';
 import Snake from './components/Snake.js';
-import { Home as HomeIcon } from 'lucide-react';
+import Leaderboard from './components/Leaderboard.js';
+import { Home as HomeIcon, Trophy } from 'lucide-react';
 
 const h = React.createElement;
 
@@ -39,7 +39,7 @@ export default function App() {
         },
         h('img', {
           src: brandLogo,
-          alt: 'Logo',
+          alt: 'Play Horizon Logo',
           style: {
             width: '40px',
             height: '40px',
@@ -52,7 +52,7 @@ export default function App() {
       ),
       h(
         'nav',
-        { className: 'nav-links' },
+        { className: 'nav-links', style: { display: 'flex', gap: '10px' } },
         h(
           'button',
           {
@@ -61,6 +61,15 @@ export default function App() {
           },
           h(HomeIcon, { size: 18 }),
           h('span', { className: 'hide-mobile' }, 'Arcade')
+        ),
+        h(
+          'button',
+          {
+            className: `nav-btn ${view === 'leaderboard' ? 'active' : ''}`,
+            onClick: () => setView('leaderboard')
+          },
+          h(Trophy, { size: 18 }),
+          h('span', { className: 'hide-mobile' }, 'Leaderboard')
         )
       )
     ),
@@ -83,12 +92,16 @@ export default function App() {
           difficulty,
           onQuit: () => setView('quiz-lobby'),
           onFinished: () => setView('quiz-lobby')
+        }),
+      view === 'leaderboard' &&
+        h(Leaderboard, {
+          onBack: () => setView('home')
         })
     ),
     h(
       'footer',
       { className: 'site-footer', role: 'contentinfo' },
-      h('p', { className: 'site-footer-title' }, 'Play Horizon'),
+      h('p', { className: 'site-footer-title' }, 'Play Horizon Arcade'),
       h(
         'p',
         { className: 'site-footer-tagline' },
@@ -97,7 +110,7 @@ export default function App() {
       h(
         'p',
         { className: 'site-footer-meta' },
-        'Static web app · React via CDN'
+        'Built with React 18 & ES Modules · High Performance Client Architecture'
       )
     )
   );

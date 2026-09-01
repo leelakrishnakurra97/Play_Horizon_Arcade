@@ -83,6 +83,25 @@ export default function Sudoku({ onQuit }) {
   }, [difficulty]);
 
   useEffect(() => {
+    if (isWon && difficulty) {
+      try {
+        const points = difficulty === 'hard' ? 300 : difficulty === 'medium' ? 200 : 100;
+        const raw = localStorage.getItem('quiz_leaderboard');
+        const existing = raw ? JSON.parse(raw) : [];
+        existing.push({
+          name: 'Sudoku Solver',
+          score: points,
+          difficulty: `Sudoku (${difficulty})`,
+          date: new Date().toLocaleDateString()
+        });
+        localStorage.setItem('quiz_leaderboard', JSON.stringify(existing));
+      } catch (e) {
+        // ignore quota
+      }
+    }
+  }, [isWon, difficulty]);
+
+  useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedCell) return;
       if (e.key >= '1' && e.key <= '9') {

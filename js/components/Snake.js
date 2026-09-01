@@ -6,7 +6,7 @@ const h = React.createElement;
 const GRID_SIZE = 20;
 const INITIAL_SPEED = 150;
 
-const createEmptyGrid = () => Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(0));
+const generateEmptyGrid = () => Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(0));
 
 const generateApple = (snake) => {
   let newApple;
@@ -38,6 +38,24 @@ export default function Snake({ onQuit }) {
     setIsPlaying(true);
     setApple(generateApple([[10, 10]]));
   }
+
+  useEffect(() => {
+    if (gameOver && score > 0) {
+      try {
+        const raw = localStorage.getItem('quiz_leaderboard');
+        const existing = raw ? JSON.parse(raw) : [];
+        existing.push({
+          name: 'Snake Pilot',
+          score: score,
+          difficulty: 'Neon Snake',
+          date: new Date().toLocaleDateString()
+        });
+        localStorage.setItem('quiz_leaderboard', JSON.stringify(existing));
+      } catch (e) {
+        // ignore quota error
+      }
+    }
+  }, [gameOver, score]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -220,6 +238,8 @@ export default function Snake({ onQuit }) {
           style: {
             width: '500px',
             height: '500px',
+            maxWidth: '100%',
+            aspectRatio: '1',
             display: 'grid',
             gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)`,
             gridTemplateRows: `repeat(${GRID_SIZE}, 1fr)`
