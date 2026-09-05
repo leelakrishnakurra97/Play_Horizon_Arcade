@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
 **Play Horizon** is a web-based arcade suite designed to demonstrate advanced frontend engineering practices, zero-bundler modular architecture, custom canvas physics, and dynamic state management without heavy build systems or backend server overhead. 
 
