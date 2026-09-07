@@ -25,7 +25,7 @@ The application brings together three distinct interactive games—**Sudoku**, *
 
 ---
 
-## ⚡ Technical Stack & Engineering Highlights
+##  Technical Stack & Engineering Highlights
 
 ### 1. Buildless React & Native ES Module Architecture
 - **Zero-Build Compilation**: Employs browser-native **Import Maps** (`<script type="importmap">`) and modern ES6+ Module imports via `esm.sh` CDN.
