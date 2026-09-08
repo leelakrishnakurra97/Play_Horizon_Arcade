@@ -56,7 +56,7 @@ The application brings together three distinct interactive games—**Sudoku**, *
 
 ---
 
-## 📂 Project Architecture & Directory Layout
+##  Project Architecture & Directory Layout
 
 ```
 Play_Horizon_Arcade/
