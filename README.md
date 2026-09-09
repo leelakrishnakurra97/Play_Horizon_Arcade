@@ -117,7 +117,7 @@ Open **`http://localhost:5173`** (or the port provided by your server) in your b
 
 ---
 
-## 🌐 Deployment & CI/CD Pipeline
+##  Deployment & CI/CD Pipeline
 
 This application is automated for continuous deployment on **GitHub Pages**:
 
