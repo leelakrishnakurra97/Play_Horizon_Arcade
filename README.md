@@ -127,7 +127,7 @@ This application is automated for continuous deployment on **GitHub Pages**:
 
 ---
 
-## 📈 Scalability & Future Roadmap
+##  Scalability & Future Roadmap
 
 - [ ] **WebSockets Multi-Player**: Real-time duel mode for QuizMaster and Sudoku speed runs.
 - [ ] **Web Audio Engine**: Sound effect synthesizer utilizing the native Web Audio API.
