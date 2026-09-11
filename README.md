@@ -100,7 +100,7 @@ Play_Horizon_Arcade/
 
 ---
 
-## 🚀 Quick Start & Local Execution
+##  Quick Start & Local Execution
 
 ### Prerequisites
 - Node.js (v16+) *or* any static web server extension (e.g., VS Code Live Server).
