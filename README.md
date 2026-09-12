@@ -87,7 +87,7 @@ Play_Horizon_Arcade/
 
 ---
 
-## 🛠️ Architecture & Design Decisions
+##  Architecture & Design Decisions
 
 ### Why Buildless React Architecture?
 > **Engineering Rationale**: Production build steps add tooling complexity and pipeline overhead. By leveraging native ES Modules (`type="module"`) alongside Import Maps, the application executes directly in modern browser engines while retaining React's component-driven state architecture.
