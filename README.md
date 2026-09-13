@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>🎮 Play Horizon — Arcade Suite</h1>
+  <h1> Play Horizon — Arcade Suite</h1>
 
   <p><b>A high-performance, buildless single-page browser gaming platform featuring Sudoku, Neon Snake, and QuizMaster.</b></p>
 
