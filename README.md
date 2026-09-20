@@ -46,7 +46,7 @@ The application brings together three distinct interactive games—**Sudoku**, *
 
 ---
 
-## 🕹️ Mini-Game Suite Breakdown
+## Mini-Game Suite Breakdown
 
 | Game Module | Core Mechanics & Architecture | Key Features |
 | :--- | :--- | :--- |
